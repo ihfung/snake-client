@@ -18,6 +18,15 @@ const handleUserInput = function(keyInput) {
     //console.log("right");
     connection.write("Move: right");
   }
+
+  if (keyInput === 'z') {
+    connection.write("Say: Nice try!");
+  }
+
+  if (keyInput === 'x') {
+    connection.write("Say: So close!");
+  }
+  
   if (keyInput === '\u0003') {
     process.exit();
   }
