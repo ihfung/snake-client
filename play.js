@@ -11,8 +11,7 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   //Update the connect function to handle incoming data and console.log it for the player.
-  conn.on("data", (data) => {
-    console.log(data);
+  conn.on("data", () => {
     console.log("you ded cuz you idled");
   });
   
