@@ -3,19 +3,19 @@ let connection;
 const handleUserInput = function(keyInput) {
  
   if (keyInput === 'w') {
-    console.log("up");
+    //console.log("up");
     connection.write("Move: up");
   }
   if (keyInput === 'a') {
-    console.log("left");
+    //console.log("left");
     connection.write("Move: left");
   }
   if (keyInput === 's') {
-    console.log("down");
+    //console.log("down");
     connection.write("Move: down");
   }
   if (keyInput === 'd') {
-    console.log("right");
+    //console.log("right");
     connection.write("Move: right");
   }
   if (keyInput === '\u0003') {
