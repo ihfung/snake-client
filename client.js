@@ -9,7 +9,38 @@ const connect = function() {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: LHF");
+    /*setTimeout(() => {
+      conn.write("Move: up");
+    }, 50);
+    setTimeout(() => {
+      conn.write("Move: down");
+    }, 100);
+    setTimeout(() => {
+      conn.write("Move: left");
+    }, 150);
+    setTimeout(() => {
+      conn.write("Move: right");
+    }, 200);
+    */
+    /*
+    setInterval(() => {
+      conn.write("Move: up");
+    }, 50);
+    setInterval(() => {
+      conn.write("Move: down");
+    }, 100);
+    setInterval(() => {
+      conn.write("Move: left");
+    }, 150);
+    setInterval(() => {
+      conn.write("Move: right");
+    }, 200);
+   */
+  
   });
+
+  
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
