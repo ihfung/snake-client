@@ -27,7 +27,7 @@ const setupInput = (conn) => {
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
-  stdin.on("data", handleUserInput);
+  stdin.on('data', handleUserInput);
   return stdin;
 };
 
@@ -35,4 +35,4 @@ const setupInput = (conn) => {
 
 
 setupInput();
-module.exports = { setupInput};
+module.exports = { setupInput };
