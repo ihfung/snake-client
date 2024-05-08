@@ -2,21 +2,21 @@ let connection;
 
 const handleUserInput = function(keyInput) {
  
-  if (keyInput === 's') {
-    console.log("down");
-    connection.write('Move: down');
-  }
   if (keyInput === 'w') {
     console.log("up");
-    connection.write('Move: up');
+    connection.write("Move: up");
   }
   if (keyInput === 'a') {
     console.log("left");
-    connection.write('Move: left');
+    connection.write("Move: left");
+  }
+  if (keyInput === 's') {
+    console.log("down");
+    connection.write("Move: down");
   }
   if (keyInput === 'd') {
     console.log("right");
-    connection.write('Move: right');
+    connection.write("Move: right");
   }
   if (keyInput === '\u0003') {
     process.exit();
