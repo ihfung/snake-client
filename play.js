@@ -10,12 +10,11 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  //Update the connect function to handle incoming data and console.log it for the player.
-  conn.on("data", () => {
-    console.log("you ded cuz you idled");
+  conn.on("data", (data) => {
+    console.log("Server says:", data);
   });
-  
 
+  
   return conn;
 };
 
