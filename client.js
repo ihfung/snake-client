@@ -13,13 +13,13 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
-  conn.on("data", (data) => {
-    console.log("Server says:", data);
+  conn.on("data", (data) => { // event handler for incoming data
+    console.log("Server says:", data); // logs the incoming data
   });
 
-  conn.on("connect", () => {
+  conn.on("connect", () => { // event handler for connection established
     console.log("Successfully connected to game server");
-    conn.write("Name: LHF");
+    conn.write("Name: LHF"); // sends the name to the server
     /*setTimeout(() => {
       conn.write("Move: up");
     }, 50);
@@ -50,7 +50,7 @@ const connect = function() {
   
   });
   
-  return conn;
+  return conn; // returns the connection object
 };
 
-module.exports = { connect };
+module.exports = { connect }; // exports the connect function
