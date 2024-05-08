@@ -33,7 +33,7 @@ const handleUserInput = function(keyInput) {
 
 };
 
-
+//use arrow function to setupInput function to handle user input and store the active TCP connection object
 const setupInput = (conn) => {
   connection = conn; // store the active TCP connection object
   const stdin = process.stdin; // setup interface for keyboard input
