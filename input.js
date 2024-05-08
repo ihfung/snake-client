@@ -1,17 +1,5 @@
 let connection;
 
-const setupInput = (conn) => {
-  connection = conn; //
-  const stdin = process.stdin;
-  stdin.setRawMode(true);
-  stdin.setEncoding("utf8");
-  stdin.resume();
-  stdin.on("data", handleUserInput);
-  return stdin;
-};
-
-
-
 const handleUserInput = function(keyInput) {
  
   if (keyInput === 'w') {
@@ -31,6 +19,20 @@ const handleUserInput = function(keyInput) {
   }
 
 };
+
+
+const setupInput = (conn) => {
+  connection = conn; //
+  const stdin = process.stdin;
+  stdin.setRawMode(true);
+  stdin.setEncoding("utf8");
+  stdin.resume();
+  stdin.on("data", handleUserInput);
+  return stdin;
+};
+
+
+
 
 setupInput();
 module.exports = { setupInput};
